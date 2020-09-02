@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Tomorrow is thursday'
+                echo 'Today is Wednesday'
             }
         }
     }
