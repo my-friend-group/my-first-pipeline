@@ -2,9 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('run when feature') {
+            when {
+          branch 'feature'
+            }
             steps {
-                echo 'Tomorrow is Thursday'
+                echo 'this runs only on feature branch'
+            }
+        }
+        stage('run when master') {
+            when {
+                branch 'master'
+            }
+            steps {
+                echo 'this runs only on master branch'
             }
         }
     }
